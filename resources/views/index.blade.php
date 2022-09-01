@@ -35,11 +35,11 @@
             </div>
 
             <hr class="my-4">
-            @forelse($lists as $list)
+            @forelse($tasks as $task)
                 <div class="d-flex justify-content-center align-content-center">
                     <input class="" type="checkbox" value="" id="flexCheckChecked3" aria-label="..." />
-                    <input type="text" value='{{$list->name}}' readonly id="name" class="form-control mt-1">
-                <form action="{{ route('destroy', $list->id) }}" method="POST">
+                    <input type="text" value='{{$task->name}}' readonly id="name" class="form-control mt-1">
+                <form action="{{ route('destroy', $task->id) }}" method="POST">
                     @method('DELETE')
                     @csrf
                     <button class="btn btn-danger my-2" title="Delete" type="submit">Deletar</button>

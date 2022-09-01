@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\ToDoListController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [ToDoListController::class, 'index'])->name('index');
+Route::get('/', [TaskController::class, 'index'])->name('index');
 
-Route::post('/add', [ToDoListController::class, 'store'])->name('store');
+Route::post('/add', [TaskController::class, 'store'])->name('store');
 
-Route::delete('/destroy/{id}', [ToDoListController::class, 'destroy'])->name('destroy');
+Route::delete('/destroy/{id}', [TaskController::class, 'destroy'])->name('destroy');
 
