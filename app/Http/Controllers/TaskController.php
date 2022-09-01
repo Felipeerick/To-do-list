@@ -22,14 +22,14 @@ class TaskController extends Controller
 
     public function store(Request $request)
     {
-        $this->model->create($request->all());
+        $this->model->createRequest($request->all());
 
         return redirect()->route('index');
     }
 
     public function destroy($id)
     {
-        $task = $this->model->find($id);
+        $task = $this->model->findID($id);
 
         $task->delete();
 

@@ -16,14 +16,19 @@ class AbstractRepository
         return $this->model->all();
     }
 
-    public function create()
+    public function createRequest($request)
     {
-        return $this->model->create();
+        return $this->model->create($request);
     }
 
     public function delete()
     {
         return $this->model->delete();
+    }
+
+    public function findID($id)
+    {
+        return $this->model->find($id);
     }
 
     protected function getModel()

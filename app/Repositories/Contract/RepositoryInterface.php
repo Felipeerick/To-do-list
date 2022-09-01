@@ -6,7 +6,7 @@ interface RepositoryInterface
 {
     public function all();
 
-    public function create();
+    public function createRequest($request);
 
     public function delete();
 } 

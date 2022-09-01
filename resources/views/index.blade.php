@@ -25,7 +25,7 @@
                     <form action="{{ route('store') }}" method="POST" class="d-flex">
                         @csrf   
                         <input type="text" class="form-control form-control-lg"
-                        placeholder="Add new..." name="name">
+                        placeholder="Add new..." name="name" required>
                         <div class="d-flex flex-row justify-content-end">
                             <button type="submit" class="btn btn-success">Add</button>
                         </div>
