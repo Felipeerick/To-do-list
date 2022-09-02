@@ -8,7 +8,7 @@ class AbstractRepository
 
     public function __construct()
     {
-        $this->model = $this->getModel();
+        $this->model = $this->resolveModel();
     }
 
     public function all()
@@ -31,7 +31,7 @@ class AbstractRepository
         return $this->model->find($id);
     }
 
-    protected function getModel()
+    protected function resolveModel()
     {
         return app($this->model);
     } 
